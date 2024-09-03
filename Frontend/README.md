@@ -1,5 +1,5 @@
 ***AirePro Event Management Limited:****
-git clone:
+git clone: https://github.com/shahinur009/AirePro-Software.git
 
 ***install for project running:***
 1. npm i axios

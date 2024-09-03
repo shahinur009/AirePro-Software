@@ -6,7 +6,16 @@ const app = express();
 const PORT = 8081;
 
 app.use(express.json());
-app.use(cors());
+app.use(
+    cors({
+      origin: [
+        "http://localhost:8081",
+        "https://cardoctor-bd.web.app",
+        "https://cardoctor-bd.firebaseapp.com",
+      ],
+      credentials: true,
+    })
+  );
 
 const db = mysql.createConnection({
     host: 'localhost',
