@@ -27,7 +27,7 @@ const Add = () => {
         }
 
         // Make POST request to the backend
-        axios.post('http://localhost:8081/add', info)
+        axios.post('https://airepro-software.web.app/add', info)
             .then(res => {
                 console.log(res);  // Log success response
                 Swal.fire({
