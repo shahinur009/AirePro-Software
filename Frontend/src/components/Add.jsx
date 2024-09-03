@@ -52,9 +52,9 @@ const Add = () => {
     return (
         <div className="flex min-h-screen bg-green-400 justify-center mx-auto items-center text-black">
             <div className="w-1/2 max-w-5xl bg-gray-400 rounded-md p-5 py-5">
-                <div>
+                <div className='flex justify-between'>
                     <h1 className='text-3xl font-bold'>Add Event Here</h1>
-                    <Link to='/' className='btn btn-accent'>Back Home</Link>
+                    <Link to='/' className='btn btn-accent w-1/2'>Back Home</Link>
                 </div>
                 <form className="card-body" onSubmit={handleSubmit}>
                     <div className="form-control">
