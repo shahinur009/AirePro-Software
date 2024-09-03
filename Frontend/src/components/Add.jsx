@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 const Add = () => {
@@ -45,14 +45,17 @@ const Add = () => {
                     icon: "error",
                     title: "Oops...",
                     text: "Something went wrong!",
-                  });  // Show error message to user
+                });  // Show error message to user
             });
     };
 
     return (
         <div className="flex min-h-screen bg-green-400 justify-center mx-auto items-center text-black">
             <div className="w-1/2 max-w-5xl bg-gray-400 rounded-md p-5 py-5">
-                <h1 className='text-3xl font-bold'>Add Event Here</h1>
+                <div>
+                    <h1 className='text-3xl font-bold'>Add Event Here</h1>
+                    <Link to='/' className='btn btn-accent'>Back Home</Link>
+                </div>
                 <form className="card-body" onSubmit={handleSubmit}>
                     <div className="form-control">
                         <label className="label">

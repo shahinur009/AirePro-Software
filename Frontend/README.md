@@ -12,6 +12,7 @@ git clone: https://github.com/shahinur009/AirePro-Software.git
 8. cors
 9. mysql
 10. react-router-dom
+11. Firebase
 
 **Run projects**
 1. Backend: node index.js
@@ -19,4 +20,4 @@ git clone: https://github.com/shahinur009/AirePro-Software.git
 
 **live link**
 1. server site vercel:
-2. frontend-
+2. frontend-Firebase: 
