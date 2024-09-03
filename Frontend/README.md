@@ -1,0 +1,22 @@
+***AirePro Event Management Limited:****
+git clone:
+
+***install for project running:***
+1. npm i axios
+2. Tailwind CSS
+3. Daisy UI
+4. npm install sweetalert2
+5. XAMPP
+6. Node js
+7. Express js
+8. cors
+9. mysql
+10. react-router-dom
+
+**Run projects**
+1. Backend: node index.js
+2. Frontend: npm run dev
+
+**live link**
+1. server site vercel:
+2. frontend-
