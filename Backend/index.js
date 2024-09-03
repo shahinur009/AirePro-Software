@@ -18,10 +18,10 @@ app.use(
   );
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'airepro-software-event'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_DBNAME
 });
 
 // Connect to the database and handle errors
@@ -130,66 +130,6 @@ app.put('/update/:eventId', (req, res) => {
         });
     });
 });
-
-
-// // Add Event to Database
-// app.post('/add', (req, res) => {
-
-//     const info = req.body;
-//     // console.log(info);
-//     // time validation
-//     const checkSql = 'SELECT * FROM event WHERE eventDate = ? AND ((startTime <= ? AND endTime >= ?) OR (startTime <= ? AND endTime >= ?))';
-    
-
-//     const sql = 'INSERT INTO event (eventName, eventDate, startTime, endTime, location, description, participants) VALUES (?, ?, ?, ?, ?, ?, ?)';
-//     const values = [
-//         info.eventName,
-//         info.eventDate,
-//         info.startTime,
-//         info.endTime,
-//         info.location,
-//         info.description,
-//         info.participants
-//     ];
-
-//     db.query(sql, values, (err, data) => {
-//         if (err) {
-//             console.error("Database error:", err);  // Log error details for better debugging
-//             return res.status(500).json({ message: "Error from server-side post method", error: err.message });
-//         }
-//         return res.status(201).json({ message: "Event added successfully", data });
-//     });
-// });
-
-// // Update event api here
-// app.put('/update/:eventId', (req, res) => {
-//     // console.log("PUT request received for event ID:", req.params.eventId);
-
-//     const info = req.body;
-//     // console.log("Request Body:", info);
-
-//     const sql = 'UPDATE event SET `eventName` = ?, `eventDate` = ?, `startTime` = ?, `endTime` = ?, `location` = ?, `description` = ?, `participants` = ? WHERE `eventId` = ?';
-
-//     const values = [
-//         info.eventName,
-//         info.eventDate,
-//         info.startTime,
-//         info.endTime,
-//         info.location,
-//         info.description,
-//         info.participants
-//     ];
-
-//     const id = req.params.eventId;
-
-//     db.query(sql, [...values, id], (err, data) => {
-//         if (err) {
-//             console.error("Database error:", err);
-//             return res.status(500).json({ message: "Error from server-side update method", error: err.message });
-//         }
-//         return res.status(200).json({ message: "Event updated successfully", data });
-//     });
-// });
 
 // Delete event API here
 app.delete('/delete/:eventId', (req, res) => {
