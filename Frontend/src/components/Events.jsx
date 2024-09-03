@@ -7,14 +7,14 @@ export default function Events() {
     const [event, setEvent] = useState([]);
 
     useEffect(() => {
-        axios.get('https://airepro-software.web.app/')
+        axios.get('http://localhost:8081/')
             .then(res => setEvent(res.data))
             .catch(err => console.log(err));
     }, []);
 
     const handleDelete = async (eventId) => {
         try {
-            await axios.delete(`https://airepro-software.web.app/delete/${eventId}`);
+            await axios.delete(`http://localhost:8081/delete/${eventId}`);
             window.location.reload();  // Refresh the page to reflect changes
             Swal.fire({
                 title: "Delete Done!",

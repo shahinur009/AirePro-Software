@@ -25,7 +25,7 @@ const Update = () => {
     });
 
     useEffect(() => {
-        axios.get(`https://airepro-software.web.app/read/${eventId}`)
+        axios.get(`http://localhost:8081/read/${eventId}`)
             .then(res => {
                 const eventData = res.data[0];
                 setValues({
@@ -59,7 +59,7 @@ const Update = () => {
             return;
         }
 
-        axios.put(`https://airepro-software.web.app/update/${eventId}`, info)
+        axios.put(`http://localhost:8081/update/${eventId}`, info)
             .then(res => {
                 Swal.fire({
                     position: "top-end",

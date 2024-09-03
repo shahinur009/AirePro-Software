@@ -6,7 +6,7 @@ git clone: https://github.com/shahinur009/AirePro-Software.git
 2. Tailwind CSS
 3. Daisy UI
 4. npm install sweetalert2
-5. XAMPP
+5. XAMPP setup and start Mysql & Apache
 6. Node js
 7. Express js
 8. cors
@@ -20,4 +20,4 @@ git clone: https://github.com/shahinur009/AirePro-Software.git
 
 **live link**
 1. server site vercel:
-2. frontend-Firebase: 
+2. Live link: frontend-Firebase: https://airepro-software.web.app/
