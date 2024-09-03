@@ -7,7 +7,7 @@ const Read = () => {
     const [event, setEvent] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:8081/read/${eventId}`)
+        axios.get(`https://airepro-software.web.app/read/${eventId}`)
             .then(res => {
                 console.log(res.data)
                 setEvent(res.data[0])
